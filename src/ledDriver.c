@@ -28,3 +28,7 @@ void ledDriver_Turn_Off_LEDS(uint16_t *address, uint16_t ledsOff){
 		*address = 0x0000;
 
 }
+
+void ledDriver_Status(uint16_t *address){
+
+}
