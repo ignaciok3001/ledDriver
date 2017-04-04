@@ -1,0 +1,41 @@
+---
+:source:
+  :path: test
+  :file: test_ledDriver.c
+:successes:
+- :test: testDriverCreateDebeApagarTodosLosLeds
+  :line: 15
+  :message: ''
+- :test: testDriver_Prender_Cada_LED
+  :line: 23
+  :message: ''
+- :test: testDriver_Apagar_Cada_LED
+  :line: 39
+  :message: ''
+- :test: testDriver_OnOff_Multiple
+  :line: 56
+  :message: ''
+- :test: testDriver_Off_All
+  :line: 91
+  :message: ''
+- :test: testDriver_On_All
+  :line: 100
+  :message: ''
+- :test: testDriver_Status_LED
+  :line: 109
+  :message: ''
+- :test: testDriver_Verif_Inside_Limit
+  :line: 118
+  :message: ''
+- :test: testDriver_Verif_Outside_Limit
+  :line: 132
+  :message: ''
+:failures: []
+:ignores: []
+:counts:
+  :total: 9
+  :passed: 9
+  :failed: 0
+  :ignored: 0
+:stdout:
+- ''

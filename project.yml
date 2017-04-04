@@ -57,7 +57,7 @@
     int8:     INT8
     bool:     UINT8
 
-:flags: #AGREGO ESTOS FLAGS
+:flags:
   :test:
     :compile:
       :*:
@@ -66,6 +66,7 @@
     :link:
       :*:
         - -fprofile-arcs
+        - -ftest-coverage
 
 #:tools:
 # Ceedling defaults to using gcc for compiling, linking, etc.
@@ -77,6 +78,5 @@
     - vendor/ceedling/plugins
   :enabled:
     - stdout_pretty_tests_report
-    - xml_tests_report #en lugar de module_generator
+    - xml_tests_report
 ...
-

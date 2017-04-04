@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<TestRun>
+	<FailedTests/>
+	<SuccessfulTests>
+		<Test id="1">
+			<Name>test/test_ledDriver.c::testDriverCreateDebeApagarTodosLosLeds</Name>
+		</Test>
+		<Test id="2">
+			<Name>test/test_ledDriver.c::testDriver_Prender_Cada_LED</Name>
+		</Test>
+		<Test id="3">
+			<Name>test/test_ledDriver.c::testDriver_Apagar_Cada_LED</Name>
+		</Test>
+		<Test id="4">
+			<Name>test/test_ledDriver.c::testDriver_OnOff_Multiple</Name>
+		</Test>
+		<Test id="5">
+			<Name>test/test_ledDriver.c::testDriver_Off_All</Name>
+		</Test>
+		<Test id="6">
+			<Name>test/test_ledDriver.c::testDriver_On_All</Name>
+		</Test>
+		<Test id="7">
+			<Name>test/test_ledDriver.c::testDriver_Status_LED</Name>
+		</Test>
+		<Test id="8">
+			<Name>test/test_ledDriver.c::testDriver_Verif_Inside_Limit</Name>
+		</Test>
+		<Test id="9">
+			<Name>test/test_ledDriver.c::testDriver_Verif_Outside_Limit</Name>
+		</Test>
+	</SuccessfulTests>
+	<IgnoredTests/>
+	<Statistics>
+		<Tests>9</Tests>
+		<Ignores>0</Ignores>
+		<FailuresTotal>0</FailuresTotal>
+		<Errors>0</Errors>
+		<Failures>0</Failures>
+	</Statistics>
+</TestRun>
