@@ -26,7 +26,7 @@ void testDriver_Prender_Cada_LED() {
 	tearDown();
 
 	leds = 0x0001;
-	for ( uint16_t i = 1; i <= 16; i++) {
+	for ( i = 1; i <= 16; i++) {
 		tearDown();
 		ledDriver_Turn_On_LEDS(&address,leds);
 		TEST_ASSERT_EQUAL_HEX16(leds, address);
@@ -41,7 +41,7 @@ void testDriver_Apagar_Cada_LED() {
 
 	tearDown();
 	leds = 0x0001;
-	for ( uint16_t i = 1; i <= 16; i++) {
+	for ( i = 1; i <= 16; i++) {
 		tearDown();
 		leds = !leds;
 	    ledDriver_Turn_Off_LEDS(&address,leds);

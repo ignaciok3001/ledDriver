@@ -56,7 +56,7 @@ void testDriver_Prender_Cada_LED() {
 
  leds = 0x0001;
 
- for ( uint16_t i = 1; i <= 16; i++) {
+ for ( i = 1; i <= 16; i++) {
 
   tearDown();
 
@@ -90,7 +90,7 @@ void testDriver_Apagar_Cada_LED() {
 
  leds = 0x0001;
 
- for ( uint16_t i = 1; i <= 16; i++) {
+ for ( i = 1; i <= 16; i++) {
 
   tearDown();
 
@@ -274,10 +274,6 @@ void testDriver_Status_LED(){
 
 
 
-
-
-
-
 }
 
 
@@ -296,7 +292,7 @@ void testDriver_Verif_Inside_Limit(){
 
 ((void *)0)
 
-), (UNITY_UINT)(123), UNITY_DISPLAY_STYLE_HEX16);
+), (UNITY_UINT)(121), UNITY_DISPLAY_STYLE_HEX16);
 
 
 
@@ -310,7 +306,7 @@ void testDriver_Verif_Inside_Limit(){
 
 ((void *)0)
 
-), (UNITY_UINT)(128), UNITY_DISPLAY_STYLE_HEX16);
+), (UNITY_UINT)(126), UNITY_DISPLAY_STYLE_HEX16);
 
 
 
@@ -334,7 +330,7 @@ void testDriver_Verif_Outside_Limit(){
 
 ((void *)0)
 
-), (UNITY_UINT)(138), UNITY_DISPLAY_STYLE_HEX16);
+), (UNITY_UINT)(136), UNITY_DISPLAY_STYLE_HEX16);
 
 
 
@@ -350,6 +346,6 @@ void testDriver_Verif_Outside_Limit(){
 
 ((void *)0)
 
-), (UNITY_UINT)(144), UNITY_DISPLAY_STYLE_HEX16);
+), (UNITY_UINT)(142), UNITY_DISPLAY_STYLE_HEX16);
 
 }

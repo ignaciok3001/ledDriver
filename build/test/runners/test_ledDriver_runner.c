@@ -61,8 +61,8 @@ int main(void)
   RUN_TEST(testDriver_Off_All, 91);
   RUN_TEST(testDriver_On_All, 100);
   RUN_TEST(testDriver_Status_LED, 109);
-  RUN_TEST(testDriver_Verif_Inside_Limit, 118);
-  RUN_TEST(testDriver_Verif_Outside_Limit, 132);
+  RUN_TEST(testDriver_Verif_Inside_Limit, 116);
+  RUN_TEST(testDriver_Verif_Outside_Limit, 130);
 
   return (UnityEnd());
 }
