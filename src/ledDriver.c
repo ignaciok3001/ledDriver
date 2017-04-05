@@ -1,6 +1,8 @@
 
 #include "ledDriver.h"
 
+uint16_t LedPrendido = 0, PosicionDeLed =0;
+
 void ledDriver_create(uint16_t *address) {
 	*address = 0;
 }
@@ -29,6 +31,6 @@ void ledDriver_Turn_Off_LEDS(uint16_t *address, uint16_t ledsOff){
 
 }
 
-void ledDriver_Status(uint16_t *address){
+LedPrendido ledDriver_Status(uint16_t *address, uint16_t PosicionDeLed){
 
 }
