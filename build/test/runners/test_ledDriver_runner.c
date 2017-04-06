@@ -54,15 +54,15 @@ void resetTest(void)
 int main(void)
 {
   UnityBegin("test_ledDriver.c");
-  RUN_TEST(testDriverCreateDebeApagarTodosLosLeds, 15);
-  RUN_TEST(testDriver_Prender_Cada_LED, 23);
-  RUN_TEST(testDriver_Apagar_Cada_LED, 39);
-  RUN_TEST(testDriver_OnOff_Multiple, 56);
-  RUN_TEST(testDriver_Off_All, 91);
-  RUN_TEST(testDriver_On_All, 100);
-  RUN_TEST(testDriver_Status_LED, 109);
-  RUN_TEST(testDriver_Verif_Inside_Limit, 116);
-  RUN_TEST(testDriver_Verif_Outside_Limit, 130);
+  RUN_TEST(testDriverCreateDebeApagarTodosLosLeds, 19);
+  RUN_TEST(testDriver_Prender_Cada_LED, 28);
+  RUN_TEST(testDriver_Apagar_Cada_LED, 46);
+  RUN_TEST(testDriver_OnOff_Multiple, 66);
+  RUN_TEST(testDriver_Off_All, 127);
+  RUN_TEST(testDriver_On_All, 138);
+  RUN_TEST(testDriver_Status_LED, 149);
+  RUN_TEST(testDriver_Verif_Inside_Limit, 191);
+  RUN_TEST(testDriver_Verif_Outside_Limit, 209);
 
   return (UnityEnd());
 }
