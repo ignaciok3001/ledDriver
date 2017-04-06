@@ -66,7 +66,7 @@ void testDriver_Apagar_Cada_LED() {
 void testDriver_OnOff_Multiple(){
 	estadoDeledsEnBit = 0x1111;
 	tearDown();
-	ledDriver_Turn_On_LED(&address,1);
+	ledDriver_Turn_On_LED(&address,1);		//Va encendiendo  y apagando de a 4 LEDs
 	ledDriver_Turn_On_LED(&address,5);
 	ledDriver_Turn_On_LED(&address,9);
 	ledDriver_Turn_On_LED(&address,13);
@@ -129,7 +129,7 @@ void testDriver_Off_All(){
 	tearDown();
 	estadoDeledsEnBit = 0x0000;
 	ledDriver_Turn_Off_All(&address);
-	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address);
+	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address); //Puede apagar todos
 
 }
 
@@ -140,7 +140,7 @@ void testDriver_On_All(){
 	tearDown();
 	estadoDeledsEnBit = 0xFFFF;
 	ledDriver_Turn_On_All(&address);
-	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address);
+	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address); //Prende todos
 
 }
 
@@ -194,13 +194,13 @@ void testDriver_Verif_Inside_Limit(){
 	address = 0x8000;
 	estadoDeledsEnBit = address;
 	ledDriver_Turn_On_LED(&address,16);
-	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address);
+	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address); //El led mas alto se prendo
 
 	tearDown();
 	address = 0x0001;
 	estadoDeledsEnBit = address;
 	ledDriver_Turn_On_LED(&address,1);
-	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address);
+	TEST_ASSERT_EQUAL_HEX16(estadoDeledsEnBit, address); //El led mas bajo se prende
 
 }
 
@@ -208,7 +208,7 @@ void testDriver_Verif_Inside_Limit(){
 
 void testDriver_Verif_Outside_Limit(){
 
-	uint32_t nroFueraDeRango = 0x000FFFFF; // Nro >  16
+	uint32_t nroFueraDeRango = 0x000FFFFF; // Con un Nro de LED >  16
 	tearDown();
 
 	ledDriver_Turn_On_LED(&address,nroFueraDeRango); //No los prende
@@ -218,12 +218,12 @@ void testDriver_Verif_Outside_Limit(){
 	ledDriver_Turn_Off_LED(&address,nroFueraDeRango); // No los apaga
 	TEST_ASSERT_EQUAL_HEX16(0xFFFF, address);
 
-	nroFueraDeRango = 0x0000;			//Nro <  1
+	nroFueraDeRango = 0x0000;			//Con el Nro de LED <  1
 	tearDown();
 	ledDriver_Turn_On_LED(&address,nroFueraDeRango);
-	TEST_ASSERT_EQUAL_HEX16(0, address);
+	TEST_ASSERT_EQUAL_HEX16(0, address);			//No los prende
 
 	ledDriver_Turn_On_All(&address);
 	ledDriver_Turn_Off_LED(&address,nroFueraDeRango);
-	TEST_ASSERT_EQUAL_HEX16(0xFFFF, address);
+	TEST_ASSERT_EQUAL_HEX16(0xFFFF, address);		// No los apaga
 }
